@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+		
+		<title>Movie Review | Single</title>
+
+		<!-- Loading third party fonts -->
+		<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+		<!-- Loading main css file -->
+		<link rel="stylesheet" href="style.css">
+		
+		<!--[if lt IE 9]>
+		<script src="js/ie-support/html5.js"></script>
+		<script src="js/ie-support/respond.js"></script>
+		<![endif]-->
+
+	</head>
+
+
+	<body>
+		
+
+		<div id="site-content">
+			<header class="site-header">
+				<div class="container">
+					<a href="index.html" id="branding">
+						<img src="data:image/png;base64,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" alt="" class="logo" height="44">
+						<div class="logo-copy">
+							<h1 class="site-title">Ab reveiws</h1>
+							<small class="site-description">we belive in reality</small>
+						</div>
+					</a> <!-- #branding -->
+
+					<div class="main-navigation">
+						<button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
+						<ul class="menu">
+							<li class="menu-item"><a href="index.html">Home</a></li>
+							<li class="menu-item"><a href="about.html">About</a></li>
+							<li class="menu-item current-menu-item"><a href="review.html">Movie reviews</a></li>
+							<li class="menu-item"><a href="joinus.html">Join us</a></li>
+							<li class="menu-item"><a href="contact.html">Contact</a></li>
+						</ul> <!-- .menu -->
+
+						<form action="#" class="search-form">
+							<input type="text" placeholder="Search...">
+							<button><i class="fa fa-search"></i></button>
+						</form>n><i class="fa fa-search"></i></button>
+						</form>
+					</div> <!-- .main-navigation -->
+
+					<div class="mobile-navigation"></div>
+				</div>
+			</header>
+			<main class="main-content">
+				<div class="container">
+					<div class="page">
+						<div class="breadcrumbs">
+							<a href="index.html">Home</a>
+							<a href="review.html">Movie Review</a>
+						</div>
+
+						<div class="content">
+							<div class="row">
+								<div class="col-md-6">
+									<figure class="movie-poster"><img src="https://th-i.thgim.com/public/incoming/vyszsy/article67294851.ece/alternates/FREE_1200/Pushpa%202.jpg" alt="#"></figure>
+								</div>
+								<div class="col-md-6">
+									<h2 class="movie-title">Pushpa-2 the rule</h2>
+									<div class="movie-summary">
+										<p>Bade Miyan Chote Miyan is a 2024 Hindi-language science fiction action-thriller film written and directed by Ali Abbas Zafar. It is produced by Ali Abbas Zafar, Jackky Bhagnani, Vashu Bhagnani, Deepshikha Deshmukh and Himanshu Kishan Mehra under the banners of Pooja Entertainment and AAZ Films. The film stars Akshay Kumar and Tiger Shroff in the title roles with Prithviraj Sukumaran as the antagonist. It also features Manushi Chhillar, Alaya F, Sonakshi Sinha and Ronit Bose Roy in pivotal roles. </p>
+
+										<p>The film was announced in February 2022. Principal photography began in January 2023 and ended by February 2024 with filming held in Mumbai, Scotland, London, Luton, Abu Dhabi, and Jordan. The soundtrack is composed by Vishal Mishra, while Julius Packiam gave the background score, with Marcin Laskawiec as the cinematographer and Steven H. Bernard as the editor. The visual effects are handled by DNEG.
+
+											Bade Miyan Chote Miyan was theatrically released on 11 April 2024, coinciding with Eid.</p>
+									</div>
+									<ul class="movie-meta">
+										<li><strong>Rating:</strong> 
+											<div class="star-rating" title="Rated 3.00 out of 5"><span style="width:80%"><strong class="rating">4.00</strong> out of 5</span></div>
+										</li>
+										<li><strong>Length:</strong> 2 Hrs 44 min</li>
+										<li><strong>Premiere:</strong>10 APRIL 2024 (INDIA)</li>
+										<li><strong>Category:</strong> Action</li>
+									</ul>
+
+									<ul class="starring">
+										<li><strong>Directors:</strong> Ali Abbas Zafar</li>
+										<li><strong>Producers:</strong> Pooja enertainment</li>
+										<li><strong>Stars:</strong> Akshay kumar,Tiger shroff,Prithviraj Sakumaran</li>
+									</ul>
+								</div>
+							</div> <!-- .row -->
+							<div class="entry-content">
+								<p>An Indian convoy carrying a deadly weapon is ambushed and the soldiers guarding it are killed in the process. The perpetrator is a masked man who leaves a message for the Indian army telling them he has stolen their weapon and now they have to race against time in order to prevent the destruction of India. Captain Misha meets an agent in China who warns her about the same and gets killed by another masked attacker. Misha chases after him and gets into a fistfight, impaling him with a sharp weapon. However, the man's wounds heal instantly and he flees the scene. Misha reports to Colonel Azad and explains how the attacker's wounds healed magically. Azad tells her to keep it a secret and instructs her to enlist court martialed soldiers Firoz aka Freddy and Rakesh aka Rocky for the mission.</p>
+								<p>Misha meets both of them and while Rocky agrees to accompany her, Freddy turns down the offer, feeling his job got him nothing but disrespect in the end. Misha and Rocky arrive in London and meet an IT Specialist named Parminder aka Pam, who is assigned to assist them in the mission. Azad also arrives in London, but gets shot by the masked villain. On the other hand, the team decides to infiltrate the London subway in order to retrieve the stolen package. Pam accompanies Rocky since she is the only one capable of unlocking the vault containing the package, and Rocky gets into a brawl with the super soldier who refuses to die down. Just as the team is cornered and nearly defeated, Freddy arrives and fights off the masked men. Pam unlocks the vault and it is revealed that the package is actually a woman named Priya, who used to date Freddy. Since hard drives were at the risk of being hacked or falling into wrong hands, the codes to a highly advanced defense system named Karan Kavach were encrypted inside Priya's brain. However, the masked villain and his army take Priya hostage and following a sustained chase, the heroes are cornered and the villain is revealed to be Kabir, a former friend of the duo. He also reveals the nearly immortal masked men were none other than the duo's clones.</p>
+								<p>It is revealed in a flashback that Kabir became a UK citizen but intended to help the Indian armed forces with the help of his latest invention: a cloning program where clones based on Freddy and Rocky's DNA could be programmed with orders by Azad and win wars without being killed. However, when he revealed his intentions to capture the world using this invention, Azad reprimanded him in front of everyone and ordered him to shut down the program since it would go against ethics. Offended and feeling betrayed, Kabir decided to switch sides and sell the invention to India's enemies. Since Priya assisted him, she decided to switch sides as well and alerted the team about the same. Freddy and Rocky were ordered to destroy the program and capture Kabir alive. However, they ended up killing him and eventually court-martialed for not following orders, after which Freddy broke up with Priya. However, Kabir reveals he survived because the one who died was actually his clone Eklavya, whom he loved like a son. His death left him traumatized and vengeful</p>
+							</div>
+						</div>
+					</div>
+				</div> <!-- .container -->
+			</main>
+			<footer class="site-footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-2">
+							<div class="widget">
+								<h3 class="widget-title">About Us</h3>
+								<p>We provide real reviews and collection detials everyday you can also get real information on our youtube channel also.</p>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="widget">
+								<h3 class="widget-title">Recent Review</h3>
+								<ul class="no-bullet">
+									<li>Devara</li>
+									<li>Bmcm</li>
+									<li>Baap </li>
+									<li>Jawan</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="widget">
+								<h3 class="widget-title">Help Center</h3>
+								<ul class="no-bullet">
+									<li>abreviews0529@gmail.com</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="widget">
+								<h3 class="widget-title">Social Media</h3>
+								<ul class="no-bullet">
+									<li>Facebook</li>
+									<li>Twitter</li>
+									<li>Youtube</li>
+									<li>Pinterest</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="widget">
+								<h3 class="widget-title">Newsletter</h3>
+								<form action="#" class="subscribe-form">
+									<input type="text" placeholder="Email Address">
+								</form>
+							</div>
+						</div>
+					</div> <!-- .row -->
+
+					<div class="colophon">Copyright 2024 Ab reviews, Designed by Shivam Yadav. All rights reserved</div>
+				</div> <!-- .container -->
+
+			</footer>
+		</div>
+		<!-- Default snippet for navigation -->
+		
+
+
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/plugins.js"></script>
+		<script src="js/app.js"></script>
+		
+	</body>
+
+</html>
